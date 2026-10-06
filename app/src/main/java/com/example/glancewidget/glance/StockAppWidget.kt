@@ -55,6 +55,7 @@ class StockAppWidget : GlanceAppWidget() {
         } else {
             GlanceTheme.colors.error
         }
+
         val textStyle = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
