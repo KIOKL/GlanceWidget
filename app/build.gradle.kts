@@ -4,18 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "com.example.glancewidget"
+    namespace = "com.example.glanceexample"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.glancewidget"
+        applicationId = "com.example.glanceexample"
         minSdk = 27
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,6 +43,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation(libs.androidx.glance.appwidget)
+    implementation(libs.androidx.glance.material3)
+
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
