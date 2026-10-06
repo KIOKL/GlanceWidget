@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.glanceexample"
+    namespace = "com.example.glancewidget"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.glanceexample"
+        applicationId = "com.example.glancewidget"
         minSdk = 27
         targetSdk = 37
         versionCode = 1

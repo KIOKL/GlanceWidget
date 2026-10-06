@@ -2,6 +2,7 @@ package com.example.glancewidget.glance
 
 import android.content.Context
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
+import androidx.glance.appwidget.updateAll
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -9,6 +10,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.seconds
 
 class StockAppWidgetReceiver : GlanceAppWidgetReceiver() {
 
@@ -23,7 +25,7 @@ class StockAppWidgetReceiver : GlanceAppWidgetReceiver() {
             while (isActive) {
                 PriceDataRepo.update()
                 StockAppWidget().updateAll(context)
-                delay(20_000L)
+                delay(20.seconds)
             }
         }
     }
